@@ -1,0 +1,32 @@
+搭建开发环境
+
+首先，确定系统安装版本为 3.6.X 或 3.7.X 及以上，若版本为 2.X.X ，请安装最新版的 3.X 的Python.
+
+$ python3 --version
+Python 3.6.7
+然后，用pip安装网站开发所需要的第三方库：
+
+异步框架的 aiohttp
+前端模板引擎 jinja2
+数据库 MySQL的Python异步驱动程序 aiomysql (需要先下载安装最新版的 MySQL, 选择免费的 MySQL Community Server 下载安装就好)
+轻量级标记语言Markdown, 将文本转换为有效的HTML
+$ pip3 install aiohttp jinja2 aiomysql markdown
+构建项目结构
+
+选择一个工作目录，建立如下的目录结构:
+
+awesome-website/         <-- 根目录
+|
++- backup/               <-- 备份目录
+|
++- conf/                 <-- 配置文件
+|
++- dist/                 <-- 打包目录
+|
++- www/                  <-- Web目录，存放.py文件
+|  |
+|  +- static/            <-- 存放静态文件
+|  |
+|  +- templates/         <-- 存放模板文件
+|
++- LICENSE               <-- 代码LICENSE
